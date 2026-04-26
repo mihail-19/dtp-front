@@ -25,6 +25,7 @@
   gap: 10px;
     box-sizing: border-box;
   background-color: rgb(163, 162, 162);
+  
 }
 .dtp-filters{
   display: flex;
@@ -33,17 +34,88 @@
   flex-basis: 30%;
   flex-grow: 0;
   background-color: rgb(255, 255, 255);
+  padding: 10px;
 }
 .dtp-map{
   flex: 1;
-  height: 820px;
+ // height: 820px;
+  flex-basis: 50%;
+  position: relative;
 }
 
 .dtp-stats{
-  width: 400px;
+   flex-basis: 50%;
+   padding: 10px;
   background-color: white;
 }
-
+.dtp-filter__selects-container{
+  display: flex;
+  gap: 10px;
+}
+.dtp-filter__selects label{
+  padding: 0 3px 0 0;
+  display: inline-block;
+ 
+}
 .dtp-filter__selects select{
   width: 200px;
+}
+
+
+
+.map-show-buttons{
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  gap: 10px;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+
+.map-show-button{
+  padding: 5px;
+  cursor: pointer;
+  opacity: 0.9;
+  color: white;
+}
+.map-show-button_active{
+  background-color: rgb(6, 46, 25);
+}
+.map-show-button_passive{
+  background-color: rgb(83, 73, 73);
+  color: rgb(182, 182, 182);
+}
+.dtp-charts{
+  width: 100%;
+  height: 300px;
+}
+.dtp-chart{
+  width: 100%;
+  height: 300px;
+}
+
+
+@media(max-width: 1000px){
+  .dtp-filter__selects-container{
+    flex-direction: column;
+  }
+  .dtp-filter__selects label{
+    width: 70px;
+  }
+
+  .dtp-container{
+    flex-direction: column;
+  }
+  .dtp-map{
+    flex-basis: auto;  
+    height: 400px;
+  }
+  .dtp-stats{
+   flex-basis: auto;
+   height: 600px;
+  }
+  .dtp-container {
+    height: auto;
+}
 }
